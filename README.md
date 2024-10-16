@@ -87,18 +87,26 @@ This is a URL Shortener service built with Spring Boot. The service provides an 
    git clone https://github.com/yourusername/url-shortener-app.git
    cd url-shortener-app
    ```
-2. Build the project:
+2. Set database
+    Go to file `properties-dev.properties` in `/resource` folder then update the parameters below as per your database settings
+    ```
+   spring.datasource.url=jdbc:postgresql://localhost:5432/short_url_db?useSSL=false
+   spring.datasource.username=postgres
+   spring.datasource.password=postgres
+   ```
+3. Build the project:
    ```
    mvn clean install
    ```
-3. Run the application:
+4. Run the application:
    ```
    mvn spring-boot:run
    ```
-4. Access the API at `http://localhost:8080/api/v1/urlShortener` 
+5. Access the API at `http://localhost:8080/api/v1/urlShortener` 
 
 ## Testing
 Unit tests and integration tests are included in the project. To run the tests, use the following command:
 ```
 mvn test
 ```
+
